@@ -44,7 +44,8 @@ public final class YandexTest {
 		marketLaptopsPage.apply();
 		assertEquals(12, marketLaptopsPage.countProducts());
 		final String firstElementName = marketLaptopsPage.getProductName(1);
-		final SearchResultPage searchResultPage = marketLaptopsPage.search(firstElementName);
+		final SearchResultPage searchResultPage = marketLaptopsPage
+				.search(firstElementName);
 		assertEquals(firstElementName, searchResultPage.getProductName());
 	}
 
@@ -59,6 +60,14 @@ public final class YandexTest {
 				.clickTablets();
 		marketTabletsPage.inputLowerPrice("20000");
 		marketTabletsPage.inputUpperPrice("25000");
+		marketTabletsPage.tickAcer();
+		marketTabletsPage.tickDell();
+		marketTabletsPage.apply();
+		assertEquals(12, marketTabletsPage.countProducts());
+		final String firstElementName = marketTabletsPage.getProductName(1);
+		final SearchResultPage searchResultPage = marketTabletsPage
+				.search(firstElementName);
+		assertEquals(firstElementName, searchResultPage.getProductName());
 	}
 
 	@After
