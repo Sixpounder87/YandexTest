@@ -1,0 +1,25 @@
+{
+  "testCases" : [ {
+    "uid" : "103662d454a68775",
+    "name" : "test01Laptops",
+    "title" : "Тест 01. Тестирование выбора ноутбуков",
+    "time" : {
+      "start" : 1492470150029,
+      "stop" : 1492470193856,
+      "duration" : 43827
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  }, {
+    "uid" : "c49db55df328e300",
+    "name" : "test02Tablets",
+    "title" : "Тест 02. Тестирование выбора планшетов",
+    "time" : {
+      "start" : 1492470193872,
+      "stop" : 1492470247849,
+      "duration" : 53977
+    },
+    "severity" : "NORMAL",
+    "status" : "PASSED"
+  } ]
+}

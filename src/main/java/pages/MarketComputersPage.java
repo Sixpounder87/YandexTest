@@ -1,12 +1,17 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import ru.yandex.qatools.allure.annotations.Step;
 import utils.TimeUtil;
 
 public class MarketComputersPage extends MarketMainPage {
+
+	private Logger logger = LoggerFactory.getLogger(MarketComputersPage.class);
 
 	private static final By LAPTOPS_LOCATOR = By
 			.xpath("//div[@class='catalog-menu__list']/a[text()='Ноутбуки']");
@@ -34,7 +39,11 @@ public class MarketComputersPage extends MarketMainPage {
 	}
 
 	private MarketProductPage clickProduct(By by) {
-		driver.findElement(by).click();
+		try {
+			driver.findElement(by).click();
+		} catch (NoSuchElementException e) {
+			logger.error("Элемент не найден");
+		}
 		return new MarketProductPage(driver);
 	}
 }

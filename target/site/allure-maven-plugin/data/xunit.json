@@ -1,0 +1,49 @@
+{
+  "time" : {
+    "start" : 1492470150029,
+    "stop" : 1492470247849,
+    "duration" : 97820
+  },
+  "testSuites" : [ {
+    "uid" : "c9d58b3bea8929b9",
+    "name" : "testcases.YandexTest",
+    "title" : "Yandex Market test suite",
+    "time" : {
+      "start" : 1492470150029,
+      "stop" : 1492470247849,
+      "duration" : 97820
+    },
+    "statistic" : {
+      "total" : 2,
+      "passed" : 2,
+      "pending" : 0,
+      "canceled" : 0,
+      "failed" : 0,
+      "broken" : 0
+    },
+    "description" : null,
+    "testCases" : [ {
+      "uid" : "103662d454a68775",
+      "name" : "test01Laptops",
+      "title" : "Тест 01. Тестирование выбора ноутбуков",
+      "time" : {
+        "start" : 1492470150029,
+        "stop" : 1492470193856,
+        "duration" : 43827
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    }, {
+      "uid" : "c49db55df328e300",
+      "name" : "test02Tablets",
+      "title" : "Тест 02. Тестирование выбора планшетов",
+      "time" : {
+        "start" : 1492470193872,
+        "stop" : 1492470247849,
+        "duration" : 53977
+      },
+      "severity" : "NORMAL",
+      "status" : "PASSED"
+    } ]
+  } ]
+}

@@ -1,12 +1,17 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import ru.yandex.qatools.allure.annotations.Step;
 import utils.TimeUtil;
 
 public class SearchResultPage extends MarketMainPage {
+
+	private Logger logger = LoggerFactory.getLogger(SearchResultPage.class);
 
 	private static final By NAME_LOCATOR = By
 			.cssSelector("h1[itemprop='name']");
@@ -23,7 +28,12 @@ public class SearchResultPage extends MarketMainPage {
 
 	@Step("Получить название найденного продукта")
 	public String getProductName() {
-		return driver.findElement(NAME_LOCATOR).getText();
+		try {
+			return driver.findElement(NAME_LOCATOR).getText();
+		} catch (NoSuchElementException e) {
+			logger.error("Элемент не найден");
+			return "";
+		}
 	}
 
 }

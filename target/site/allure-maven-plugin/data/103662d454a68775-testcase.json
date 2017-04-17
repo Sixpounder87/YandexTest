@@ -1,0 +1,257 @@
+{
+  "uid" : "103662d454a68775",
+  "name" : "test01Laptops",
+  "title" : "Тест 01. Тестирование выбора ноутбуков",
+  "time" : {
+    "start" : 1492470150029,
+    "stop" : 1492470193856,
+    "duration" : 43827
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 14
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "c9d58b3bea8929b9",
+    "name" : "testcases.YandexTest",
+    "title" : "Yandex Market test suite"
+  },
+  "steps" : [ {
+    "name" : "openPage[https://yandex.ru/]",
+    "title" : "Зайти на страницу https://yandex.ru/",
+    "time" : {
+      "start" : 1492470154272,
+      "stop" : 1492470158173,
+      "duration" : 3901
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "clickMarket",
+    "title" : "Перейти в яндекс маркет",
+    "time" : {
+      "start" : 1492470160200,
+      "stop" : 1492470164270,
+      "duration" : 4070
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "clickComputers",
+    "title" : "Выбрать раздел Компьютеры",
+    "time" : {
+      "start" : 1492470164272,
+      "stop" : 1492470170045,
+      "duration" : 5773
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "clickLaptops",
+    "title" : "Выбрать раздел Ноутбуки",
+    "time" : {
+      "start" : 1492470170046,
+      "stop" : 1492470177622,
+      "duration" : 7576
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "inputUpperPrice[30000]",
+    "title" : "Задать верхний ценовой диапазон 30000",
+    "time" : {
+      "start" : 1492470177624,
+      "stop" : 1492470177799,
+      "duration" : 175
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "tickManufacturer[By.xpath: //label[text()='HP']/.., HP]",
+    "title" : "Выбрать марку HP",
+    "time" : {
+      "start" : 1492470177802,
+      "stop" : 1492470180376,
+      "duration" : 2574
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "tickManufacturer[By.xpath: //label[text()='Lenovo']/.., Lenovo]",
+    "title" : "Выбрать марку Lenovo",
+    "time" : {
+      "start" : 1492470180378,
+      "stop" : 1492470183161,
+      "duration" : 2783
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "apply",
+    "title" : "Нажать кнопку Применить",
+    "time" : {
+      "start" : 1492470183163,
+      "stop" : 1492470183895,
+      "duration" : 732
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "checkNumberOfElements[12, pages.MarketProductPage@734cea]",
+    "title" : "Проверить, что количество элементов на странице 12",
+    "time" : {
+      "start" : 1492470183898,
+      "stop" : 1492470183960,
+      "duration" : 62
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 1
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ {
+      "name" : "countProducts",
+      "title" : "Посчитать количество элементов поиска",
+      "time" : {
+        "start" : 1492470183899,
+        "stop" : 1492470183960,
+        "duration" : 61
+      },
+      "summary" : {
+        "attachments" : 0,
+        "steps" : 0
+      },
+      "status" : "PASSED",
+      "attachments" : [ ],
+      "steps" : [ ]
+    } ]
+  }, {
+    "name" : "getProductName[1]",
+    "title" : "Получить название 1-го элемента",
+    "time" : {
+      "start" : 1492470183961,
+      "stop" : 1492470184025,
+      "duration" : 64
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "verifyProductName[pages.MarketProductPage@734cea, Lenovo IdeaPad 310 15 Intel]",
+    "title" : "Найти и проверить, что наименование товара соответствует Lenovo IdeaPad 310 15 Intel",
+    "time" : {
+      "start" : 1492470184027,
+      "stop" : 1492470191873,
+      "duration" : 7846
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 2
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ {
+      "name" : "search[Lenovo IdeaPad 310 15 Intel]",
+      "title" : "Найти в поисковой строке \"Lenovo IdeaPad 310 15 Intel\"",
+      "time" : {
+        "start" : 1492470184027,
+        "stop" : 1492470191215,
+        "duration" : 7188
+      },
+      "summary" : {
+        "attachments" : 0,
+        "steps" : 0
+      },
+      "status" : "PASSED",
+      "attachments" : [ ],
+      "steps" : [ ]
+    }, {
+      "name" : "getProductName",
+      "title" : "Получить название найденного продукта",
+      "time" : {
+        "start" : 1492470191216,
+        "stop" : 1492470191873,
+        "duration" : 657
+      },
+      "summary" : {
+        "attachments" : 0,
+        "steps" : 0
+      },
+      "status" : "PASSED",
+      "attachments" : [ ],
+      "steps" : [ ]
+    } ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Yury-PC"
+  }, {
+    "name" : "thread",
+    "value" : "4492@Yury-PC.main(1)"
+  }, {
+    "name" : "suite-name",
+    "value" : "testcases.YandexTest"
+  }, {
+    "name" : "suite-title",
+    "value" : "Yandex Market test suite"
+  }, {
+    "name" : "framework",
+    "value" : "JUnit"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  } ],
+  "parameters" : [ ]
+}

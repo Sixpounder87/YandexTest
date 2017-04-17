@@ -3,16 +3,21 @@ package pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import ru.yandex.qatools.allure.annotations.Step;
 import utils.TimeUtil;
 
 public class MarketProductPage extends MarketMainPage {
+
+	private Logger logger = LoggerFactory.getLogger(MarketProductPage.class);
 
 	private static final By DOWN_PRICE_BORDER_LOCATOR = By
 			.id("glf-pricefrom-var");
@@ -50,12 +55,20 @@ public class MarketProductPage extends MarketMainPage {
 
 	@Step("Задать нижний ценовой диапазон {0}")
 	public void inputLowerPrice(String price) {
-		driver.findElement(DOWN_PRICE_BORDER_LOCATOR).sendKeys(price);
+		try {
+			driver.findElement(DOWN_PRICE_BORDER_LOCATOR).sendKeys(price);
+		} catch (NoSuchElementException e) {
+			logger.error("Элемент не найден");
+		}
 	}
 
 	@Step("Задать верхний ценовой диапазон {0}")
 	public void inputUpperPrice(String price) {
-		driver.findElement(UP_PRICE_BORDER_LOCATOR).sendKeys(price);
+		try {
+			driver.findElement(UP_PRICE_BORDER_LOCATOR).sendKeys(price);
+		} catch (NoSuchElementException e) {
+			logger.error("Элемент не найден");
+		}
 	}
 
 	public void tickHP() {
@@ -97,7 +110,11 @@ public class MarketProductPage extends MarketMainPage {
 
 	@Step("Нажать кнопку Применить")
 	public void apply() {
-		driver.findElement(BUTTON_APPLY_LOCATOR).click();
+		try {
+			driver.findElement(BUTTON_APPLY_LOCATOR).click();
+		} catch (NoSuchElementException e) {
+			logger.error("Элемент не найден");
+		}
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(PRODUCTS_LOCATOR));
 	}
@@ -129,8 +146,13 @@ public class MarketProductPage extends MarketMainPage {
 					.append(serialNumber - 3).append(lastPartLocatorString);
 		}
 
-		WebElement product = driver.findElement(By.cssSelector(locatorString
-				.toString()));
-		return product.getAttribute("title").substring(8);
+		try {
+			WebElement product = driver.findElement(By
+					.cssSelector(locatorString.toString()));
+			return product.getAttribute("title").substring(8);
+		} catch (NoSuchElementException e) {
+			logger.error("Элемент не найден");
+			return "";
+		}
 	}
 }

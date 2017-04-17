@@ -1,0 +1,272 @@
+{
+  "uid" : "c49db55df328e300",
+  "name" : "test02Tablets",
+  "title" : "Тест 02. Тестирование выбора планшетов",
+  "time" : {
+    "start" : 1492470193872,
+    "stop" : 1492470247849,
+    "duration" : 53977
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 15
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "testId" : null,
+  "suite" : {
+    "uid" : "c9d58b3bea8929b9",
+    "name" : "testcases.YandexTest",
+    "title" : "Yandex Market test suite"
+  },
+  "steps" : [ {
+    "name" : "openPage[https://yandex.ru/]",
+    "title" : "Зайти на страницу https://yandex.ru/",
+    "time" : {
+      "start" : 1492470196236,
+      "stop" : 1492470198946,
+      "duration" : 2710
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "clickMarket",
+    "title" : "Перейти в яндекс маркет",
+    "time" : {
+      "start" : 1492470200958,
+      "stop" : 1492470207024,
+      "duration" : 6066
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "clickComputers",
+    "title" : "Выбрать раздел Компьютеры",
+    "time" : {
+      "start" : 1492470207024,
+      "stop" : 1492470215201,
+      "duration" : 8177
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "clickTablets",
+    "title" : "Выбрать раздел Планшеты",
+    "time" : {
+      "start" : 1492470215202,
+      "stop" : 1492470219809,
+      "duration" : 4607
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "inputLowerPrice[20000]",
+    "title" : "Задать нижний ценовой диапазон 20000",
+    "time" : {
+      "start" : 1492470219810,
+      "stop" : 1492470220177,
+      "duration" : 367
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "inputUpperPrice[25000]",
+    "title" : "Задать верхний ценовой диапазон 25000",
+    "time" : {
+      "start" : 1492470220178,
+      "stop" : 1492470220972,
+      "duration" : 794
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "tickManufacturer[By.xpath: //label[text()='Acer']/.., Acer]",
+    "title" : "Выбрать марку Acer",
+    "time" : {
+      "start" : 1492470220973,
+      "stop" : 1492470223366,
+      "duration" : 2393
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "tickManufacturer[By.xpath: //label[text()='DELL']/.., Dell]",
+    "title" : "Выбрать марку Dell",
+    "time" : {
+      "start" : 1492470223366,
+      "stop" : 1492470233794,
+      "duration" : 10428
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "apply",
+    "title" : "Нажать кнопку Применить",
+    "time" : {
+      "start" : 1492470233794,
+      "stop" : 1492470234396,
+      "duration" : 602
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "checkNumberOfElements[12, pages.MarketProductPage@6a5e6a]",
+    "title" : "Проверить, что количество элементов на странице 12",
+    "time" : {
+      "start" : 1492470234397,
+      "stop" : 1492470234462,
+      "duration" : 65
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 1
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ {
+      "name" : "countProducts",
+      "title" : "Посчитать количество элементов поиска",
+      "time" : {
+        "start" : 1492470234398,
+        "stop" : 1492470234462,
+        "duration" : 64
+      },
+      "summary" : {
+        "attachments" : 0,
+        "steps" : 0
+      },
+      "status" : "PASSED",
+      "attachments" : [ ],
+      "steps" : [ ]
+    } ]
+  }, {
+    "name" : "getProductName[1]",
+    "title" : "Получить название 1-го элемента",
+    "time" : {
+      "start" : 1492470234463,
+      "stop" : 1492470234542,
+      "duration" : 79
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "verifyProductName[pages.MarketProductPage@6a5e6a, Acer Switch One 10 Z8300 64Gb]",
+    "title" : "Найти и проверить, что наименование товара соответствует Acer Switch One 10 Z8300 64Gb",
+    "time" : {
+      "start" : 1492470234542,
+      "stop" : 1492470246399,
+      "duration" : 11857
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 2
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ {
+      "name" : "search[Acer Switch One 10 Z8300 64Gb]",
+      "title" : "Найти в поисковой строке \"Acer Switch One 10 Z8300 64Gb\"",
+      "time" : {
+        "start" : 1492470234543,
+        "stop" : 1492470246324,
+        "duration" : 11781
+      },
+      "summary" : {
+        "attachments" : 0,
+        "steps" : 0
+      },
+      "status" : "PASSED",
+      "attachments" : [ ],
+      "steps" : [ ]
+    }, {
+      "name" : "getProductName",
+      "title" : "Получить название найденного продукта",
+      "time" : {
+        "start" : 1492470246326,
+        "stop" : 1492470246399,
+        "duration" : 73
+      },
+      "summary" : {
+        "attachments" : 0,
+        "steps" : 0
+      },
+      "status" : "PASSED",
+      "attachments" : [ ],
+      "steps" : [ ]
+    } ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "labels" : [ {
+    "name" : "host",
+    "value" : "Yury-PC"
+  }, {
+    "name" : "thread",
+    "value" : "4492@Yury-PC.main(1)"
+  }, {
+    "name" : "suite-name",
+    "value" : "testcases.YandexTest"
+  }, {
+    "name" : "suite-title",
+    "value" : "Yandex Market test suite"
+  }, {
+    "name" : "framework",
+    "value" : "JUnit"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  } ],
+  "parameters" : [ ]
+}
