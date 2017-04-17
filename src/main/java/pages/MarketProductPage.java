@@ -3,6 +3,7 @@ package pages;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -30,10 +31,10 @@ public class MarketProductPage extends MarketMainPage {
 	private static final By BUTTON_MORE_LOCATOR = By
 			.xpath("//span[text()='Åù¸']/..");
 	private static final By INPUT_MANUFACTURER_LOCATOR = By
-			.cssSelector("span[data-filter='glf,pricefrom,var'] input.input__control");
+			.cssSelector("div:nth-child(4) > div.n-filter-block__body > div > span > span > input");
 
 	private WebDriverWait wait;
-	private final static int TIMEOUTsec = 10;
+	private final static int TIMEOUTsec = 5;
 
 	public MarketProductPage(WebDriver driver) {
 		TimeUtil.sleepTimeoutSec(2);
@@ -55,37 +56,45 @@ public class MarketProductPage extends MarketMainPage {
 	}
 
 	public void tickHP() {
-		tickManufacturer(HP_CHECKBOX_LOCATOR);
+		tickManufacturer(HP_CHECKBOX_LOCATOR, "HP");
 	}
 
 	public void tickLenovo() {
-		tickManufacturer(LENOVO_CHECKBOX_LOCATOR);
+		tickManufacturer(LENOVO_CHECKBOX_LOCATOR, "Lenovo");
 	}
 
 	public void tickAcer() {
-		tickManufacturer(ACER_CHECKBOX_LOCATOR);
+		tickManufacturer(ACER_CHECKBOX_LOCATOR, "Acer");
 	}
 
 	public void tickDell() {
-		driver.findElement(BUTTON_MORE_LOCATOR).click();
-		WebElement inputManufacturer = wait.until(
-				ExpectedConditions
-						.presenceOfElementLocated(INPUT_MANUFACTURER_LOCATOR));
-		inputManufacturer.sendKeys("Dell");
-		tickManufacturer(DELL_CHECKBOX_LOCATOR);
+		tickManufacturer(DELL_CHECKBOX_LOCATOR, "Dell");
 	}
 
-	private void tickManufacturer(By by) {
-		WebElement manufacturer = wait.until(
-				ExpectedConditions.presenceOfElementLocated(by));
-		if (!manufacturer.isSelected()) {
-			manufacturer.click();
+	private void tickManufacturer(By by, String manufacturer) {
+		WebElement manufacturerElement;
+		try {
+			manufacturerElement = wait.until(ExpectedConditions
+					.elementToBeClickable(by));
+		} catch (TimeoutException e) {
+			driver.findElement(BUTTON_MORE_LOCATOR).click();
+			WebElement inputManufacturer = wait.until(ExpectedConditions
+					.presenceOfElementLocated(INPUT_MANUFACTURER_LOCATOR));
+			inputManufacturer.sendKeys(manufacturer);
+			TimeUtil.sleepTimeoutSec(2);
+			manufacturerElement = wait.until(ExpectedConditions
+					.elementToBeClickable(by));
 		}
+		if (!manufacturerElement.isSelected()) {
+			manufacturerElement.click();
+		}
+		TimeUtil.sleepTimeoutSec(2);
 	}
 
 	public void apply() {
 		driver.findElement(BUTTON_APPLY_LOCATOR).click();
-		TimeUtil.sleepTimeoutSec(3);
+		wait.until(ExpectedConditions
+				.presenceOfElementLocated(PRODUCTS_LOCATOR));
 	}
 
 	public int countProducts() {
