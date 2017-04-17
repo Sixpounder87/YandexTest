@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import ru.yandex.qatools.allure.annotations.Step;
 import utils.TimeUtil;
 
 public class MarketMainPage {
@@ -29,11 +30,13 @@ public class MarketMainPage {
 		this.driver = driver;
 	}
 
+	@Step("Выбрать раздел Компьютеры")
 	public MarketComputersPage clickComputers() {
 		driver.findElement(COMPUTERS_LOCATOR).click();
 		return new MarketComputersPage(driver);
 	}
 
+	@Step("Найти в поисковой строке \"{0}\"")
 	public SearchResultPage search(String request) {
 		driver.findElement(INPUT_SEARCH_LOCATOR).sendKeys(request);
 		driver.findElement(BUTTON_SEARCH_LOCATOR).click();

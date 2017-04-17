@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import ru.yandex.qatools.allure.annotations.Step;
 import utils.TimeUtil;
 
 public class MarketProductPage extends MarketMainPage {
@@ -47,10 +48,12 @@ public class MarketProductPage extends MarketMainPage {
 		wait = new WebDriverWait(driver, TIMEOUTsec);
 	}
 
+	@Step("Задать нижний ценовой диапазон {0}")
 	public void inputLowerPrice(String price) {
 		driver.findElement(DOWN_PRICE_BORDER_LOCATOR).sendKeys(price);
 	}
 
+	@Step("Задать верхний ценовой диапазон {0}")
 	public void inputUpperPrice(String price) {
 		driver.findElement(UP_PRICE_BORDER_LOCATOR).sendKeys(price);
 	}
@@ -71,6 +74,7 @@ public class MarketProductPage extends MarketMainPage {
 		tickManufacturer(DELL_CHECKBOX_LOCATOR, "Dell");
 	}
 
+	@Step("Выбрать марку {1}")
 	private void tickManufacturer(By by, String manufacturer) {
 		WebElement manufacturerElement;
 		try {
@@ -91,17 +95,20 @@ public class MarketProductPage extends MarketMainPage {
 		TimeUtil.sleepTimeoutSec(2);
 	}
 
+	@Step("Нажать кнопку Применить")
 	public void apply() {
 		driver.findElement(BUTTON_APPLY_LOCATOR).click();
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(PRODUCTS_LOCATOR));
 	}
 
+	@Step("Посчитать количество элементов поиска")
 	public int countProducts() {
 		List<WebElement> list = driver.findElements(PRODUCTS_LOCATOR);
 		return list.size();
 	}
 
+	@Step("Получить название {0}-го элемента")
 	public String getProductName(int serialNumber) {
 
 		StringBuilder locatorString = new StringBuilder();

@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import ru.yandex.qatools.allure.annotations.Step;
 import utils.TimeUtil;
 
 public class SearchResultPage extends MarketMainPage {
@@ -20,6 +21,7 @@ public class SearchResultPage extends MarketMainPage {
 		this.driver = driver;
 	}
 
+	@Step("ѕолучить название найденного продукта")
 	public String getProductName() {
 		return driver.findElement(NAME_LOCATOR).getText();
 	}

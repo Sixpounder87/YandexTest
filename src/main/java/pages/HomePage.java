@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import ru.yandex.qatools.allure.annotations.Step;
 import utils.TimeUtil;
 
 public class HomePage {
@@ -23,6 +24,7 @@ public class HomePage {
 		this.driver = driver;
 	}
 	
+	@Step("Перейти в яндекс маркет")
 	public MarketMainPage clickMarket() {
 		driver.findElement(MARKET_LOCATOR).click();
 		return new MarketMainPage(driver);

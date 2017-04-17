@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import ru.yandex.qatools.allure.annotations.Step;
 import utils.TimeUtil;
 
 public class MarketComputersPage extends MarketMainPage {
@@ -22,10 +23,12 @@ public class MarketComputersPage extends MarketMainPage {
 		this.driver = driver;
 	}
 
+	@Step("Выбрать раздел Ноутбуки")
 	public MarketProductPage clickLaptops() {
 		return clickProduct(LAPTOPS_LOCATOR);
 	}
 
+	@Step("Выбрать раздел Планшеты")
 	public MarketProductPage clickTablets() {
 		return clickProduct(TABLETS_LOCATOR);
 	}
