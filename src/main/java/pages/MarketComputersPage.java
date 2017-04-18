@@ -14,9 +14,9 @@ public class MarketComputersPage extends MarketMainPage {
 	private Logger logger = LoggerFactory.getLogger(MarketComputersPage.class);
 
 	private static final By LAPTOPS_LOCATOR = By
-			.xpath("//div[@class='catalog-menu__list']/a[text()='��������']");
+			.xpath("//div[@class='catalog-menu__list']/a[text()='Ноутбуки']");
 	private static final By TABLETS_LOCATOR = By
-			.xpath("//div[@class='catalog-menu__list']/a[text()='��������']");
+			.xpath("//div[@class='catalog-menu__list']/a[text()='Планшеты']");
 
 	public MarketComputersPage(WebDriver driver) {
 		TimeUtil.sleepTimeoutSec(2);
