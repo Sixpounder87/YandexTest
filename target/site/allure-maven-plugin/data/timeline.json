@@ -2,26 +2,26 @@
   "hosts" : [ {
     "title" : "Yury-PC",
     "threads" : [ {
-      "title" : "4492@Yury-PC.main(1)",
+      "title" : "2472@Yury-PC.main(1)",
       "testCases" : [ {
-        "uid" : "103662d454a68775",
+        "uid" : "fe180fe398b9aa63",
         "name" : "test01Laptops",
         "title" : "Тест 01. Тестирование выбора ноутбуков",
         "time" : {
-          "start" : 1492470150029,
-          "stop" : 1492470193856,
-          "duration" : 43827
+          "start" : 1492552815976,
+          "stop" : 1492552862189,
+          "duration" : 46213
         },
         "severity" : "NORMAL",
         "status" : "PASSED"
       }, {
-        "uid" : "c49db55df328e300",
+        "uid" : "291d58e4624617bd",
         "name" : "test02Tablets",
         "title" : "Тест 02. Тестирование выбора планшетов",
         "time" : {
-          "start" : 1492470193872,
-          "stop" : 1492470247849,
-          "duration" : 53977
+          "start" : 1492552862205,
+          "stop" : 1492552915657,
+          "duration" : 53452
         },
         "severity" : "NORMAL",
         "status" : "PASSED"

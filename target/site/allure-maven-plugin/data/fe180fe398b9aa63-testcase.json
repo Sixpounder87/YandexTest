@@ -1,15 +1,15 @@
 {
-  "uid" : "c49db55df328e300",
-  "name" : "test02Tablets",
-  "title" : "Тест 02. Тестирование выбора планшетов",
+  "uid" : "fe180fe398b9aa63",
+  "name" : "test01Laptops",
+  "title" : "Тест 01. Тестирование выбора ноутбуков",
   "time" : {
-    "start" : 1492470193872,
-    "stop" : 1492470247849,
-    "duration" : 53977
+    "start" : 1492552815976,
+    "stop" : 1492552862189,
+    "duration" : 46213
   },
   "summary" : {
     "attachments" : 0,
-    "steps" : 15
+    "steps" : 14
   },
   "failure" : null,
   "description" : null,
@@ -17,7 +17,7 @@
   "status" : "PASSED",
   "testId" : null,
   "suite" : {
-    "uid" : "c9d58b3bea8929b9",
+    "uid" : "7e7b40f2690ff069",
     "name" : "testcases.YandexTest",
     "title" : "Yandex Market test suite"
   },
@@ -25,9 +25,9 @@
     "name" : "openPage[https://yandex.ru/]",
     "title" : "Зайти на страницу https://yandex.ru/",
     "time" : {
-      "start" : 1492470196236,
-      "stop" : 1492470198946,
-      "duration" : 2710
+      "start" : 1492552819935,
+      "stop" : 1492552822875,
+      "duration" : 2940
     },
     "summary" : {
       "attachments" : 0,
@@ -40,9 +40,9 @@
     "name" : "clickMarket",
     "title" : "Перейти в яндекс маркет",
     "time" : {
-      "start" : 1492470200958,
-      "stop" : 1492470207024,
-      "duration" : 6066
+      "start" : 1492552824898,
+      "stop" : 1492552831286,
+      "duration" : 6388
     },
     "summary" : {
       "attachments" : 0,
@@ -55,9 +55,9 @@
     "name" : "clickComputers",
     "title" : "Выбрать раздел Компьютеры",
     "time" : {
-      "start" : 1492470207024,
-      "stop" : 1492470215201,
-      "duration" : 8177
+      "start" : 1492552831288,
+      "stop" : 1492552838036,
+      "duration" : 6748
     },
     "summary" : {
       "attachments" : 0,
@@ -67,12 +67,12 @@
     "attachments" : [ ],
     "steps" : [ ]
   }, {
-    "name" : "clickTablets",
-    "title" : "Выбрать раздел Планшеты",
+    "name" : "clickLaptops",
+    "title" : "Выбрать раздел Ноутбуки",
     "time" : {
-      "start" : 1492470215202,
-      "stop" : 1492470219809,
-      "duration" : 4607
+      "start" : 1492552838043,
+      "stop" : 1492552845396,
+      "duration" : 7353
     },
     "summary" : {
       "attachments" : 0,
@@ -82,12 +82,12 @@
     "attachments" : [ ],
     "steps" : [ ]
   }, {
-    "name" : "inputLowerPrice[20000]",
-    "title" : "Задать нижний ценовой диапазон 20000",
+    "name" : "inputUpperPrice[30000]",
+    "title" : "Задать верхний ценовой диапазон 30000",
     "time" : {
-      "start" : 1492470219810,
-      "stop" : 1492470220177,
-      "duration" : 367
+      "start" : 1492552845397,
+      "stop" : 1492552845624,
+      "duration" : 227
     },
     "summary" : {
       "attachments" : 0,
@@ -97,12 +97,12 @@
     "attachments" : [ ],
     "steps" : [ ]
   }, {
-    "name" : "inputUpperPrice[25000]",
-    "title" : "Задать верхний ценовой диапазон 25000",
+    "name" : "tickManufacturer[By.xpath: //label[text()='HP']/.., HP]",
+    "title" : "Выбрать марку HP",
     "time" : {
-      "start" : 1492470220178,
-      "stop" : 1492470220972,
-      "duration" : 794
+      "start" : 1492552845625,
+      "stop" : 1492552848199,
+      "duration" : 2574
     },
     "summary" : {
       "attachments" : 0,
@@ -112,27 +112,12 @@
     "attachments" : [ ],
     "steps" : [ ]
   }, {
-    "name" : "tickManufacturer[By.xpath: //label[text()='Acer']/.., Acer]",
-    "title" : "Выбрать марку Acer",
+    "name" : "tickManufacturer[By.xpath: //label[text()='Lenovo']/.., Lenovo]",
+    "title" : "Выбрать марку Lenovo",
     "time" : {
-      "start" : 1492470220973,
-      "stop" : 1492470223366,
-      "duration" : 2393
-    },
-    "summary" : {
-      "attachments" : 0,
-      "steps" : 0
-    },
-    "status" : "PASSED",
-    "attachments" : [ ],
-    "steps" : [ ]
-  }, {
-    "name" : "tickManufacturer[By.xpath: //label[text()='DELL']/.., Dell]",
-    "title" : "Выбрать марку Dell",
-    "time" : {
-      "start" : 1492470223366,
-      "stop" : 1492470233794,
-      "duration" : 10428
+      "start" : 1492552848201,
+      "stop" : 1492552850989,
+      "duration" : 2788
     },
     "summary" : {
       "attachments" : 0,
@@ -145,9 +130,9 @@
     "name" : "apply",
     "title" : "Нажать кнопку Применить",
     "time" : {
-      "start" : 1492470233794,
-      "stop" : 1492470234396,
-      "duration" : 602
+      "start" : 1492552850990,
+      "stop" : 1492552851747,
+      "duration" : 757
     },
     "summary" : {
       "attachments" : 0,
@@ -157,12 +142,12 @@
     "attachments" : [ ],
     "steps" : [ ]
   }, {
-    "name" : "checkNumberOfElements[12, pages.MarketProductPage@6a5e6a]",
+    "name" : "checkNumberOfElements[12, pages.MarketProductPage@1efb66c]",
     "title" : "Проверить, что количество элементов на странице 12",
     "time" : {
-      "start" : 1492470234397,
-      "stop" : 1492470234462,
-      "duration" : 65
+      "start" : 1492552851750,
+      "stop" : 1492552851810,
+      "duration" : 60
     },
     "summary" : {
       "attachments" : 0,
@@ -174,9 +159,9 @@
       "name" : "countProducts",
       "title" : "Посчитать количество элементов поиска",
       "time" : {
-        "start" : 1492470234398,
-        "stop" : 1492470234462,
-        "duration" : 64
+        "start" : 1492552851751,
+        "stop" : 1492552851810,
+        "duration" : 59
       },
       "summary" : {
         "attachments" : 0,
@@ -190,9 +175,9 @@
     "name" : "getProductName[1]",
     "title" : "Получить название 1-го элемента",
     "time" : {
-      "start" : 1492470234463,
-      "stop" : 1492470234542,
-      "duration" : 79
+      "start" : 1492552851811,
+      "stop" : 1492552851865,
+      "duration" : 54
     },
     "summary" : {
       "attachments" : 0,
@@ -202,12 +187,12 @@
     "attachments" : [ ],
     "steps" : [ ]
   }, {
-    "name" : "verifyProductName[pages.MarketProductPage@6a5e6a, Acer Switch One 10 Z8300 64Gb]",
-    "title" : "Найти и проверить, что наименование товара соответствует Acer Switch One 10 Z8300 64Gb",
+    "name" : "verifyProductName[pages.MarketProductPage@1efb66c, Lenovo IdeaPad 310 15 Intel]",
+    "title" : "Найти и проверить, что наименование товара соответствует Lenovo IdeaPad 310 15 Intel",
     "time" : {
-      "start" : 1492470234542,
-      "stop" : 1492470246399,
-      "duration" : 11857
+      "start" : 1492552851866,
+      "stop" : 1492552860434,
+      "duration" : 8568
     },
     "summary" : {
       "attachments" : 0,
@@ -216,12 +201,12 @@
     "status" : "PASSED",
     "attachments" : [ ],
     "steps" : [ {
-      "name" : "search[Acer Switch One 10 Z8300 64Gb]",
-      "title" : "Найти в поисковой строке \"Acer Switch One 10 Z8300 64Gb\"",
+      "name" : "search[Lenovo IdeaPad 310 15 Intel]",
+      "title" : "Найти в поисковой строке \"Lenovo IdeaPad 310 15 Intel\"",
       "time" : {
-        "start" : 1492470234543,
-        "stop" : 1492470246324,
-        "duration" : 11781
+        "start" : 1492552851868,
+        "stop" : 1492552860323,
+        "duration" : 8455
       },
       "summary" : {
         "attachments" : 0,
@@ -234,9 +219,9 @@
       "name" : "getProductName",
       "title" : "Получить название найденного продукта",
       "time" : {
-        "start" : 1492470246326,
-        "stop" : 1492470246399,
-        "duration" : 73
+        "start" : 1492552860324,
+        "stop" : 1492552860434,
+        "duration" : 110
       },
       "summary" : {
         "attachments" : 0,
@@ -254,7 +239,7 @@
     "value" : "Yury-PC"
   }, {
     "name" : "thread",
-    "value" : "4492@Yury-PC.main(1)"
+    "value" : "2472@Yury-PC.main(1)"
   }, {
     "name" : "suite-name",
     "value" : "testcases.YandexTest"
