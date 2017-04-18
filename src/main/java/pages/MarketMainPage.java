@@ -15,7 +15,7 @@ public class MarketMainPage {
 
 	protected static final String URL_MATCH = "https://market.yandex.ru/";
 	protected static final By COMPUTERS_LOCATOR = By
-			.xpath("//li/a[text()='Компьютеры']");
+			.xpath("//li/a[text()='РљРѕРјРїСЊСЋС‚РµСЂС‹']");
 	protected static final By INPUT_SEARCH_LOCATOR = By.id("header-search");
 	protected static final By BUTTON_SEARCH_LOCATOR = By
 			.cssSelector("button[type='submit']");
@@ -35,23 +35,23 @@ public class MarketMainPage {
 		this.driver = driver;
 	}
 
-	@Step("Выбрать раздел Компьютеры")
+	@Step("Р’С‹Р±СЂР°С‚СЊ СЂР°Р·РґРµР» РљРѕРјРїСЊСЋС‚РµСЂС‹")
 	public MarketComputersPage clickComputers() {
 		try {
 			driver.findElement(COMPUTERS_LOCATOR).click();
 		} catch (NoSuchElementException e) {
-			logger.error("Элемент не найден");
+			logger.error("Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ");
 		}
 		return new MarketComputersPage(driver);
 	}
 
-	@Step("Найти в поисковой строке \"{0}\"")
+	@Step("РќР°Р№С‚Рё РІ РїРѕРёСЃРєРѕРІРѕР№ СЃС‚СЂРѕРєРµ \"{0}\"")
 	public SearchResultPage search(String request) {
 		try {
 			driver.findElement(INPUT_SEARCH_LOCATOR).sendKeys(request);
 			driver.findElement(BUTTON_SEARCH_LOCATOR).click();
 		} catch (NoSuchElementException e) {
-			logger.error("Элемент не найден");
+			logger.error("Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ");
 		}
 		return new SearchResultPage(driver);
 	}

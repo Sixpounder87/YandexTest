@@ -32,7 +32,7 @@ public final class YandexTest {
 		driver = new ChromeDriver(options);
 	}
 
-	@Title("Тест 01. Тестирование выбора ноутбуков")
+	@Title("РўРµСЃС‚ 01. РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РІС‹Р±РѕСЂР° РЅРѕСѓС‚Р±СѓРєРѕРІ")
 	@Test
 	public void test01Laptops() {
 		final MarketComputersPage marketComputersPage = getComputersMarketPage();
@@ -45,7 +45,7 @@ public final class YandexTest {
 		makeVerification(marketLaptopsPage, 12, 1);
 	}
 
-	@Title("Тест 02. Тестирование выбора планшетов")
+	@Title("РўРµСЃС‚ 02. РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РІС‹Р±РѕСЂР° РїР»Р°РЅС€РµС‚РѕРІ")
 	@Test
 	public void test02Tablets() {
 		final MarketComputersPage marketComputersPage = getComputersMarketPage();
@@ -64,17 +64,17 @@ public final class YandexTest {
 		driver.quit();
 	}
 
-	@Step("Зайти на страницу {0}")
+	@Step("Р—Р°Р№С‚Рё РЅР° СЃС‚СЂР°РЅРёС†Сѓ {0}")
 	private void openPage(String url) {
 		driver.get(url);
 	}
 
-	@Step("Проверить, что количество элементов на странице {0}")
+	@Step("РџСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РЅР° СЃС‚СЂР°РЅРёС†Рµ {0}")
 	private void checkNumberOfElements(int number, MarketProductPage page) {
 		assertEquals(number, page.countProducts());
 	}
 
-	@Step("Найти и проверить, что наименование товара соответствует {1}")
+	@Step("РќР°Р№С‚Рё Рё РїСЂРѕРІРµСЂРёС‚СЊ, С‡С‚Рѕ РЅР°РёРјРµРЅРѕРІР°РЅРёРµ С‚РѕРІР°СЂР° СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚ {1}")
 	private void verifyProductName(MarketProductPage page, String productName) {
 		final SearchResultPage searchResultPage = page.search(productName);
 		assertEquals(productName, searchResultPage.getProductName());

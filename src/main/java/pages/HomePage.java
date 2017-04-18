@@ -29,12 +29,12 @@ public class HomePage {
 		this.driver = driver;
 	}
 	
-	@Step("Перейти в яндекс маркет")
+	@Step("РџРµСЂРµР№С‚Рё РІ СЏРЅРґРµРєСЃ РјР°СЂРєРµС‚")
 	public MarketMainPage clickMarket() {
 		try {
 		driver.findElement(MARKET_LOCATOR).click();
 		} catch (NoSuchElementException e) {
-			logger.error("Элемент не найден");
+			logger.error("Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ");
 		}
 		return new MarketMainPage(driver);
 	}

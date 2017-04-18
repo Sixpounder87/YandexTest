@@ -26,12 +26,12 @@ public class SearchResultPage extends MarketMainPage {
 		this.driver = driver;
 	}
 
-	@Step("Получить название найденного продукта")
+	@Step("РџРѕР»СѓС‡РёС‚СЊ РЅР°Р·РІР°РЅРёРµ РЅР°Р№РґРµРЅРЅРѕРіРѕ РїСЂРѕРґСѓРєС‚Р°")
 	public String getProductName() {
 		try {
 			return driver.findElement(NAME_LOCATOR).getText();
 		} catch (NoSuchElementException e) {
-			logger.error("Элемент не найден");
+			logger.error("Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ");
 			return "";
 		}
 	}

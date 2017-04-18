@@ -35,7 +35,7 @@ public class MarketProductPage extends MarketMainPage {
 	private static final By PRODUCTS_LOCATOR = By
 			.cssSelector("div.n-snippet-card");
 	private static final By BUTTON_MORE_LOCATOR = By
-			.xpath("//span[text()='Ещё']/..");
+			.xpath("//span[text()='Р•С‰С‘']/..");
 	private static final By INPUT_MANUFACTURER_LOCATOR = By
 			.cssSelector("div:nth-child(4) > div.n-filter-block__body > div > span > span > input");
 
@@ -53,21 +53,21 @@ public class MarketProductPage extends MarketMainPage {
 		wait = new WebDriverWait(driver, TIMEOUTsec);
 	}
 
-	@Step("Задать нижний ценовой диапазон {0}")
+	@Step("Р—Р°РґР°С‚СЊ РЅРёР¶РЅРёР№ С†РµРЅРѕРІРѕР№ РґРёР°РїР°Р·РѕРЅ {0}")
 	public void inputLowerPrice(String price) {
 		try {
 			driver.findElement(DOWN_PRICE_BORDER_LOCATOR).sendKeys(price);
 		} catch (NoSuchElementException e) {
-			logger.error("Элемент не найден");
+			logger.error("Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ");
 		}
 	}
 
-	@Step("Задать верхний ценовой диапазон {0}")
+	@Step("Р—Р°РґР°С‚СЊ РІРµСЂС…РЅРёР№ С†РµРЅРѕРІРѕР№ РґРёР°РїР°Р·РѕРЅ {0}")
 	public void inputUpperPrice(String price) {
 		try {
 			driver.findElement(UP_PRICE_BORDER_LOCATOR).sendKeys(price);
 		} catch (NoSuchElementException e) {
-			logger.error("Элемент не найден");
+			logger.error("Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ");
 		}
 	}
 
@@ -87,7 +87,7 @@ public class MarketProductPage extends MarketMainPage {
 		tickManufacturer(DELL_CHECKBOX_LOCATOR, "Dell");
 	}
 
-	@Step("Выбрать марку {1}")
+	@Step("Р’С‹Р±СЂР°С‚СЊ РјР°СЂРєСѓ {1}")
 	private void tickManufacturer(By by, String manufacturer) {
 		WebElement manufacturerElement;
 		try {
@@ -108,24 +108,24 @@ public class MarketProductPage extends MarketMainPage {
 		TimeUtil.sleepTimeoutSec(2);
 	}
 
-	@Step("Нажать кнопку Применить")
+	@Step("РќР°Р¶Р°С‚СЊ РєРЅРѕРїРєСѓ РџСЂРёРјРµРЅРёС‚СЊ")
 	public void apply() {
 		try {
 			driver.findElement(BUTTON_APPLY_LOCATOR).click();
 		} catch (NoSuchElementException e) {
-			logger.error("Элемент не найден");
+			logger.error("Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ");
 		}
 		wait.until(ExpectedConditions
 				.presenceOfElementLocated(PRODUCTS_LOCATOR));
 	}
 
-	@Step("Посчитать количество элементов поиска")
+	@Step("РџРѕСЃС‡РёС‚Р°С‚СЊ РєРѕР»РёС‡РµСЃС‚РІРѕ СЌР»РµРјРµРЅС‚РѕРІ РїРѕРёСЃРєР°")
 	public int countProducts() {
 		List<WebElement> list = driver.findElements(PRODUCTS_LOCATOR);
 		return list.size();
 	}
 
-	@Step("Получить название {0}-го элемента")
+	@Step("РџРѕР»СѓС‡РёС‚СЊ РЅР°Р·РІР°РЅРёРµ {0}-РіРѕ СЌР»РµРјРµРЅС‚Р°")
 	public String getProductName(int serialNumber) {
 
 		StringBuilder locatorString = new StringBuilder();
@@ -151,7 +151,7 @@ public class MarketProductPage extends MarketMainPage {
 					.cssSelector(locatorString.toString()));
 			return product.getAttribute("title").substring(8);
 		} catch (NoSuchElementException e) {
-			logger.error("Элемент не найден");
+			logger.error("Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ");
 			return "";
 		}
 	}

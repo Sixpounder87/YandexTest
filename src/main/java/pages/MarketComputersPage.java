@@ -14,9 +14,9 @@ public class MarketComputersPage extends MarketMainPage {
 	private Logger logger = LoggerFactory.getLogger(MarketComputersPage.class);
 
 	private static final By LAPTOPS_LOCATOR = By
-			.xpath("//div[@class='catalog-menu__list']/a[text()='Ноутбуки']");
+			.xpath("//div[@class='catalog-menu__list']/a[text()='пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ']");
 	private static final By TABLETS_LOCATOR = By
-			.xpath("//div[@class='catalog-menu__list']/a[text()='Планшеты']");
+			.xpath("//div[@class='catalog-menu__list']/a[text()='пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ']");
 
 	public MarketComputersPage(WebDriver driver) {
 		TimeUtil.sleepTimeoutSec(2);
@@ -28,12 +28,12 @@ public class MarketComputersPage extends MarketMainPage {
 		this.driver = driver;
 	}
 
-	@Step("Выбрать раздел Ноутбуки")
+	@Step("Р’С‹Р±СЂР°С‚СЊ СЂР°Р·РґРµР» РќРѕСѓС‚Р±СѓРєРё")
 	public MarketProductPage clickLaptops() {
 		return clickProduct(LAPTOPS_LOCATOR);
 	}
 
-	@Step("Выбрать раздел Планшеты")
+	@Step("Р’С‹Р±СЂР°С‚СЊ СЂР°Р·РґРµР» РџР»Р°РЅС€РµС‚С‹")
 	public MarketProductPage clickTablets() {
 		return clickProduct(TABLETS_LOCATOR);
 	}
@@ -42,7 +42,7 @@ public class MarketComputersPage extends MarketMainPage {
 		try {
 			driver.findElement(by).click();
 		} catch (NoSuchElementException e) {
-			logger.error("Элемент не найден");
+			logger.error("Р­Р»РµРјРµРЅС‚ РЅРµ РЅР°Р№РґРµРЅ");
 		}
 		return new MarketProductPage(driver);
 	}
